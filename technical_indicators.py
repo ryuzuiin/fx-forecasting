@@ -1,8 +1,9 @@
-import talib
 import pandas as pd
+
 
 class TAFeatures:
     def __init__(self, ohlc_data):
+        self.ohlc_data = ohlc_data
         self.open = ohlc_data['Open']
         self.high = ohlc_data['High']
         self.low = ohlc_data['Low']
@@ -27,7 +28,8 @@ class TAFeatures:
         return talib.CCI(self.high, self.low, self.close, timeperiod)
 
     def MACD(self,fastperiod=12, slowperiod=26, signalperiod=9):
-        return talib.MACD(self.close, fastperiod, slowperiod, signalperiod)
+        macd, macdsignal, macdhist = talib.MACD(self.close, fastperiod, slowperiod, signalperiod)
+        return macd
 
     def MOM(self,timeperiod=10):
         return talib.MOM(self.close, timeperiod)
@@ -50,6 +52,12 @@ class TAFeatures:
     def MA(self, timeperiod=30, matype=0):
         return talib.MA(self.close, timeperiod, matype)
 
+    def NATR(self, timeperiod=14):
+        return talib.NATR(self.high, self.low, self.close, timeperiod)
+
+    def TRANGE(self):
+        return talib.TRANGE(self.high, self.low, self.close)
+
     def get_all_indicators(self):
         indicators_df = pd.DataFrame(index=self.ohlc_data.index)
 
@@ -59,16 +67,16 @@ class TAFeatures:
         indicators_df['AROONOSC'] = self.AROONOSC()
         indicators_df['BOP'] = self.BOP()
         indicators_df['CCI'] = self.CCI()
-        indicators_df[['MACD','macdsignal','macdhist']] = self.MACD()
+        indicators_df['MACD'] = self.MACD()
         indicators_df['MOM'] = self.MOM()
         indicators_df['RSI'] = self.RSI()
         indicators_df['ULTOSC'] = self.ULTOSC()
-        indicators_df[['upperband','middleband','lowerband']] = self.BBANDS()
         indicators_df['DEMA'] = self.DEMA()
         indicators_df['EMA'] = self.EMA()
         indicators_df['MA'] = self.MA()
+        indicators_df['NATR'] = self.NATR()
+        indicators_df['TRANGE'] = self.TRANGE()
         return indicators_df
-
 
     
 
