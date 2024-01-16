@@ -1,4 +1,5 @@
 import pandas as pd
+import talib
 
 
 class TAFeatures:
@@ -59,6 +60,8 @@ class TAFeatures:
         return talib.TRANGE(self.high, self.low, self.close)
 
     def get_all_indicators(self):
+
+        print(pd.__version__)
         indicators_df = pd.DataFrame(index=self.ohlc_data.index)
 
         indicators_df['ADX'] = self.ADX()
