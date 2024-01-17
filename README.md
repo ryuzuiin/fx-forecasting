@@ -14,7 +14,7 @@ In other words, this is a time series forecasting problem, and all time series f
 
 In a typical regression problem, we have an equation like Y = aX1 + bX2, where Y is the dependent variable, and X1 and X2 are independent variables. The goal is to find the optimal values of 'a' and 'b' to make the predicted value 'Y' as close as possible to the real value 'Y'. However, autoregressive models are different. In autoregression, both the dependent variable (Y) and the independent variables (X1, X2) are the same variable, which is Y itself. In other words, Y(t) = aY(t-1) + bY(t-2), where Y(t-1) is the value of Y at time t-1, and Y(t-2) is the value of Y at time t-2. This means that the current value of Y depends on past values of Y. Hence, both the independent and dependent variables are the same, which is known as autoregression.
 
-Based on the OHLC data we have, the training data mainly consists of past data, and we want to predict future data. In other words, the current value of Y depends on past values of Y, making it an autoregressive problem.
+Based on the OHLC data we have(we have X1,X2,...), the training data mainly consists of past data, and we want to predict future data. In other words, the current value of Y depends on past values of Y, making it an autoregressive problem.
 
 Therefore, I will approach the data with both a regression problem perspective and an autoregressive problem perspective, taking into account the characteristics of financial data. I will conduct Exploratory Data Analysis (EDA) and feature engineering from these different angles.
 
