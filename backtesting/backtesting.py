@@ -20,16 +20,16 @@ import pandas as pd
 class Backtest:
     def __init__(self,
                  data: pd.DataFrame
-                 strategy_type : type(Strategy),
-                 broker_type: type(ExchangeAPI),
+                 strategy_type : type,
+                 broker_type: type,
                  cash: float = 10000,
-                 commission : float = .0
+                 commission : float = 0.0
                  ):
         
-        data = data.copy(False)  
+        data = data.copy()  
         self._data = data
         self._broker = broker_type(data, cash, commission)
-        self._strategy = strategy_type(self._broker, self._self.data)
+        self._strategy = strategy_type(self._broker, self._data)
         self._results = None
     
     def run(self):
