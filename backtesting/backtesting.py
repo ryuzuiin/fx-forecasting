@@ -19,14 +19,13 @@ import pandas as pd
 
 class Backtest:
     def __init__(self,
-                 data: pd.DataFrame
-                 strategy_type : type,
-                 broker_type: type,
-                 cash: float = 10000,
-                 commission : float = 0.0
-                 ):
-        
-        data = data.copy()  
+             data: pd.DataFrame,
+             strategy_type: type,
+             broker_type: type,
+             cash: float = 10000,
+             commission: float = 0.0
+             ):
+        data = data.copy()
         self._data = data
         self._broker = broker_type(data, cash, commission)
         self._strategy = strategy_type(self._broker, self._data)
@@ -68,7 +67,7 @@ class Backtest:
         param series2: series2
         return: if crossover -> True, otherwise, Flase
         '''
-        return series1[-2] < series2[-2] and series1[-1] > series2[-1]
+        return series1[-3] < series2[-3] and series1[-2] > series2[-2] and series1[-1] > series2[-1]
     
     def next(self, tick):
         if crossover(self.sma1[:tick], self.sma2[:tick]):
