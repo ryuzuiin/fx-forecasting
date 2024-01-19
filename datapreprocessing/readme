@@ -2,4 +2,4 @@ It's about how you clean you data for regression models.
 # EDA
 # 1 gression perspective
 ## 1.1 Pearson's Corrletion Coefficient
-Before addressing missing values, I highly recommend performing some Exploratory Data Analysis (EDA) from a regression analysis perspective. For instance, you can start by calculating the Pearson's correlation coefficient for the entire dataset. By examining this coefficient, you can gain a preliminary understanding of the data trends. In the context of finance, this analysis can also help you assess whether your target data exhibits any imbalances.
+Before addressing missing values, I highly recommend performing some Exploratory Data Analysis (EDA) from a regression analysis perspective. For instance, you can start by calculating the Pearson's correlation coefficient for the entire dataset. By examining this coefficient, you can gain a preliminary understanding of the data inner correlation. In the context of finance, this analysis can also help you assess whether your target data exhibits any imbalances.
