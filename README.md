@@ -1,6 +1,8 @@
-# Fx Forecasting model from zero
+# Fx Forecasting Model From Zero
 
 This note shares some of my experiences in time series analysis and modeling, providing a comprehensive guide from handling missing values, feature analysis, to training and cross-validation processes. This project does not delve into model hyperparameter tuning and focuses primarily on feature analysis and engineering. It can serve as a baseline for future predictive modeling projects related to time-series events.
+
+Vesrion.1 Baseline
 
 ## 1. Data Description
 
