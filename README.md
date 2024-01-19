@@ -1,6 +1,8 @@
-# Fx Forecasting model from zero
+# Fx Forecasting Model From Zero
 
 This note shares some of my experiences in time series analysis and modeling, providing a comprehensive guide from handling missing values, feature analysis, to training and cross-validation processes. This project does not delve into model hyperparameter tuning and focuses primarily on feature analysis and engineering. It can serve as a baseline for future predictive modeling projects related to time-series events.
+
+Vesrion.1 Baseline
 
 ## 1. Data Description
 
@@ -18,5 +20,11 @@ Based on the OHLC data we have(we have X1,X2,...), the training data mainly cons
 
 Therefore, I will approach the data with both a regression problem perspective and an autoregressive problem perspective, taking into account the characteristics of financial data. I will conduct Exploratory Data Analysis (EDA) and feature engineering from these different angles.
 
-## 3. Exploratory Data Analysis
-### 3.1 Regression model perspective
+## 3. Application and Metrics
+### 3.1 Application
+To make a signal, help traders to make strategies based on it.
+### 3.2 Metrics
+
+## 4. Exploratory Data Analysis
+### 4.1 Regression model perspective
+#### 4.1.1 Pearsons Correlation
