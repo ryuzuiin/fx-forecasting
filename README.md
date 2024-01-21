@@ -34,5 +34,5 @@ To make a signal, help traders to make strategies based on it.
 
 ## 6. Models
 ### 6.1 ARIMA
-employing ARIMA model as an analysis tool to indicate that the target has no trend and no season. Since the time intervals of validation and test set are not constant, ARIMA model can not be applied to do the out 0ff sample forcast. "In this context, it violates the initial assumption of the ARIMA model, which requires all data samples to be collected at the same time intervals.
+employing ARIMA model as an analysis tool to indicate that the target has no trend and no season. Since the time intervals of validation and test set are not constant, ARIMA model can not be applied to do the out 0ff sample forcast. In this context, it violates the initial assumption of the ARIMA model, which requires all data samples to be collected at the same time intervals.
 
