@@ -28,3 +28,11 @@ To make a signal, help traders to make strategies based on it.
 ## 4. Exploratory Data Analysis
 ### 4.1 Regression model perspective
 #### 4.1.1 Pearsons Correlation
+
+
+## 5. Feature engineering
+
+## 6. Models
+### 6.1 ARIMA
+employing ARIMA model as an analysis tool to indicate that the target has no trend and no season.
+
